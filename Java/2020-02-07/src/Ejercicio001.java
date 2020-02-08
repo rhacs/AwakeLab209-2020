@@ -4,16 +4,16 @@ import java.util.Scanner;
 
 /*
  * Ahora, crea una clase ejecutable:
- * - Crea un array de Passwords con el tamaño que tú le indiques por teclado.
- * - Crea un bucle que cree un objeto para cada posición del array.
- * - Indica también por teclado la longitud de los Passwords (antes de bucle).
+ * - Crea un array de Passwords con el tamaÃ±o que tÃº le indiques por teclado.
+ * - Crea un bucle que cree un objeto para cada posiciÃ³n del array.
+ * - Indica tambiÃ©n por teclado la longitud de los Passwords (antes de bucle).
  * - Crea otro array de booleanos donde se almacene si el password del array de Password es o no
  *   fuerte (usa el bucle anterior).
- * - Al final, muestra la contraseña y si es o no fuerte (usa el bucle anterior).
+ * - Al final, muestra la contraseÃ±a y si es o no fuerte (usa el bucle anterior).
  * 
  * Usa este simple formato:
- * 		contraseña1 valor_booleano1
- *      contraseña2 valor_bololeano2
+ *      contraseÃ±a1 valor_booleano1
+ *      contraseÃ±a2 valor_bololeano2
  *      ...
  */
 
@@ -24,14 +24,14 @@ public class Ejercicio001 {
         
         do {
             while(!scanner.hasNextInt()) {
-                System.err.println("[!] Por favor, ingresa un número válido");
+                System.err.println("[!] Por favor, ingresa un nÃºmero vÃ¡lido");
                 scanner.next();
             }
             
             numero = scanner.nextInt();
             
             if(numero < limiteInferior) {
-                System.err.println("[!] Por favor, ingresa un número mayor o igual que "
+                System.err.println("[!] Por favor, ingresa un nÃºmero mayor o igual que "
                         + limiteInferior + ".");
             }
         } while(numero < limiteInferior);
@@ -43,18 +43,18 @@ public class Ejercicio001 {
         Scanner scanner = new Scanner(System.in);
         List<Password> passwords = new ArrayList<Password>();
         
-        System.out.println("Ingrese la cantidad de contraseñas a generar");
+        System.out.println("Ingrese la cantidad de contraseÃ±as a generar");
         int cantidadContrasenas = pedirNumeroEntero(scanner, 1);
         
         for(int i = 0; i < cantidadContrasenas; i++) {
-            System.out.println("Ingresa la longitud de la contraseña #" + (i + 1));
+            System.out.println("Ingresa la longitud de la contraseÃ±a #" + (i + 1));
             int longitud = pedirNumeroEntero(scanner, 1);
             
             Password password = new Password(longitud);
             passwords.add(password);
         }
         
-        System.out.println("\nContraseña\tesFuerte()");
+        System.out.println("\nContraseÃ±a\tesFuerte()");
         for(Password password : passwords) {
             System.out.println(" " + password.getPassword() + "\t" + password.esFuerte());
         }

@@ -7,21 +7,21 @@ import java.util.regex.Pattern;
 
 /*
  * Haz una clase llamada Password que siga las siguientes condiciones:
- * - Que tenga los atributos longitud y contraseÒa. Por defecto, la longitud ser· de 8.
- * - Los constructores ser·n los siguientes:
- * 		+ Un constructor por defecto.
- * 		+ Un constructor con la longitud que nosotros le pasemos. Generar· una contraseÒa aleatoria
- * 		  con esa longitud.
+ * - Que tenga los atributos longitud y contrase√±a. Por defecto, la longitud ser√° de 8.
+ * - Los constructores ser√°n los siguientes:
+ *      + Un constructor por defecto.
+ *      + Un constructor con la longitud que nosotros le pasemos. Generar√° una contrase√±a aleatoria
+ *        con esa longitud.
  * 
- * - Los mÈtodos que implementa ser·n:
- * 		+ esFuerte():
- *        devuelve un booleano si es fuerte o no, para que sea fuerte debe tener m·s de 1 may˙scula,
- *        m·s de 0 min˙sculas y m·s de 4 n˙meros.
+ * - Los m√©todos que implementa ser√°n:
+ *      + esFuerte():
+ *        devuelve un booleano si es fuerte o no, para que sea fuerte debe tener m√°s de 1 may√∫scula,
+ *        m√°s de 0 min√∫sculas y m√°s de 4 n√∫meros.
  *      + generarPassword():
- *        genera la contraseÒa del objeto con la longitud que tenga.
+ *        genera la contrase√±a del objeto con la longitud que tenga.
  *        
- * - MÈtodo get para contraseÒa y longitud.
- * - MÈtodo set para longitud.
+ * - M√©todo get para contrase√±a y longitud.
+ * - M√©todo set para longitud.
  */
 
 public class Password {

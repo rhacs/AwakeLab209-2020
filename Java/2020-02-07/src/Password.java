@@ -5,6 +5,25 @@ import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/*
+ * Haz una clase llamada Password que siga las siguientes condiciones:
+ * - Que tenga los atributos longitud y contraseña. Por defecto, la longitud será de 8.
+ * - Los constructores serán los siguientes:
+ * 		+ Un constructor por defecto.
+ * 		+ Un constructor con la longitud que nosotros le pasemos. Generará una contraseña aleatoria
+ * 		  con esa longitud.
+ * 
+ * - Los métodos que implementa serán:
+ * 		+ esFuerte():
+ *        devuelve un booleano si es fuerte o no, para que sea fuerte debe tener más de 1 mayúscula,
+ *        más de 0 minúsculas y más de 4 números.
+ *      + generarPassword():
+ *        genera la contraseña del objeto con la longitud que tenga.
+ *        
+ * - Método get para contraseña y longitud.
+ * - Método set para longitud.
+ */
+
 public class Password {
 
     protected String password;
@@ -59,27 +78,15 @@ public class Password {
         
         Pattern pattern = Pattern.compile("([0-9])");
         Matcher matcher = pattern.matcher(this.password);
-        int numeros = 0;
-        
-        while(matcher.find()) {
-            numeros++;
-        }
+        int numeros = (int) matcher.results().count();
         
         pattern = Pattern.compile("([a-z])");
         matcher = pattern.matcher(this.password);
-        int minusculas = 0;
-        
-        while(matcher.find()) {
-            minusculas++;
-        }
-        
+        int minusculas = (int) matcher.results().count();
+
         pattern = Pattern.compile("([A-Z])");
         matcher = pattern.matcher(this.password);
-        int mayusculas = 0;
-        
-        while(matcher.find()) {
-            mayusculas++;
-        }
+        int mayusculas = (int) matcher.results().count();
         
         return (numeros > 4 && minusculas > 0 && mayusculas > 1);
     }

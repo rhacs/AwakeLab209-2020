@@ -13,7 +13,7 @@
  */
 
 public class Robot implements Comparable<Robot> {
-    int vida;
+    private int vida;
     
     Robot(int vida) {
         this.vida = vida;
